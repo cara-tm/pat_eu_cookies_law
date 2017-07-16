@@ -35,7 +35,7 @@ You can find the [ga-lite script](https://github.com/cara-tm/pat_eu_cookies_law/
 
 # Usage Example
 
-Best place into a page template:
+Best place into a page template (perhaps into your "footer"):
 
     <txp:pat_eu_cookies_law lang="fr-fr" duration="2 Months" />
 
