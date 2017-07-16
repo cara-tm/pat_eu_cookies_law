@@ -39,6 +39,10 @@ Best place into a page template (perhaps into your "footer"):
 
     <txp:pat_eu_cookies_law lang="fr-fr" duration="2 Months" />
 
+# Advices
+
+Don't miss to create a _Legal_ page within your website and precise the purpose and the use of external third-party Cookies; the delay for automatic acceptance of the use of Cookies stored into the visitor's device; and the keeping time for Cookies acceptances and future visits. Thus, you will be into the total respect of the EU law and the respect of legal informations for your visitors.
+
 # Changelog
 
 * 15th July 2017: version 0.1
