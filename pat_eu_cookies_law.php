@@ -3,7 +3,7 @@
  * @author:  Patrick LEFEVRE.
  * @link:    https://github.com/cara-tm/EU-Cookies-Law-Compliance
  * @type:    Public
- * @prefs:   no
+ * @prefs:   yes
  * @order:   5
  * @version: 0.1.1
  * @license: GPLv2
