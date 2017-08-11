@@ -33,6 +33,10 @@ Note. The plugin use international translation by default if you don't use the c
 Some third-parties libraries generate external cookies. For example the Google Analytics script or the scripts used by Social Networks. Create such a file (or multiple ones) for this acceptance by your visitors in order to respect the EU Cookies law.
 You can find the [ga-lite script](https://github.com/cara-tm/pat_eu_cookies_law/blob/master/js/ga-lite.min.js) in this repository for your analytics as an example.
 
+# Advice
+
+Because Googlebot is based, currently, on Chromium 41(See: [https://developers.google.com/search/docs/guides/rendering](https://developers.google.com/search/docs/guides/rendering)) that do not supports Cookies, you can use this plugin to keep a hight level 100/100 Google Page Insights score by placing all Google adWords scripts into one, external then charging the plugin to load it.
+
 # Usage Example
 
 Best place into a page template (perhaps into your "footer"):
