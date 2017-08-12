@@ -35,7 +35,7 @@ You can find the [ga-lite script](https://github.com/cara-tm/pat_eu_cookies_law/
 
 # Advice
 
-Because Googlebot is based, currently, on Chromium 41(See: [https://developers.google.com/search/docs/guides/rendering](https://developers.google.com/search/docs/guides/rendering)) that do not supports Cookies, you can use this plugin to keep a hight level 100/100 Google Page Insights score by placing all Google adWords scripts into one, external then charging the plugin to load it.
+Because Googlebot is based, currently, on Chromium 41(See: [https://developers.google.com/search/docs/guides/rendering](https://developers.google.com/search/docs/guides/rendering)) that do not supports Cookies, you can use this plugin to keep a hight level 100/100 Google Page Insights score by placing all Google adWords scripts into one, external then charging the plugin to load it (this plugin keeps an eye on "Cookies" feature disabled within the browser and do not load the file(s) in this case).
 
 # Usage Example
 
