@@ -5,7 +5,7 @@
  * @type:    Public
  * @prefs:   yes
  * @order:   5
- * @version: 0.1.1
+ * @version: 0.1.2
  * @license: GPLv2
  */
 
@@ -41,7 +41,7 @@ function pat_eu_cookies_law($atts, $thing = null) {
 
 	extract(lAtts(array(
 
-		'lang'       => $prefs['language'],
+		'lang'       => substr(get_pref('language'), 0, 2),
 		'duration'   => '1 Month',
 		'force_reload' => false
 
@@ -62,7 +62,10 @@ function pat_eu_cookies_law($atts, $thing = null) {
 	$json = @file_get_contents($path_to_site.'/json/pat_eu_cookies_law_'.$lang.'.json');
 
 	// Decode the json datas
-	$json_datas = json_decode($json, true);
+	if ($json) {
+		assert_string($json);
+		$json_datas = json_decode($json, true);
+	}
 
 	// Can we proceed? Simple test within the first json value
 	if (isset($json_datas['msg']) ) {
