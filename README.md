@@ -49,6 +49,7 @@ Don't miss to create a _Legal_ page within your website and precise the purpose 
 
 # Changelog
 
+* 16th December 2017: version 0.1.3
 * 8th December 2017: version 0.1.2
 * 27th July 2017: version 0.1.1
 * 15th July 2017: version 0.1
