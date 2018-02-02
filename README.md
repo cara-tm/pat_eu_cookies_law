@@ -27,6 +27,8 @@ Note. The plugin use international translation by default if you don't use the c
 * `lang` (string): the 4 letters language choice for localisation (i.e. `lang="en-us"`). Default: the active language preference sets within the Textpattern _Languages_ page.
 * `duration` (string or integer): the delay in months for the saving user's choice. Default: `1 Month` (can be set with a number only. i.e. `1`).
 * `force_reload` (boolean `1` or `0`): if set to `1` (true) the page will be reloaded on user acceptation. Default: `0`(false).
+* `infos` (string): a section name where you want to display your legal staatement or confidential policy. That attribute create a link after the counting delay. Defaut: empty (no link creation).
+* `more` (string): the label of the link above for translation conveniencies. Default: empty.
 
 # JS files that generate cookies
 
@@ -41,7 +43,7 @@ Because Googlebot is based, currently, on Chromium 41(See: [https://developers.g
 
 Best place into a page template (perhaps into your "footer"):
 
-    <txp:pat_eu_cookies_law lang="fr-fr" duration="2 Months" />
+    <txp:pat_eu_cookies_law lang="en" duration="2 Months" force_reload="1" infos="legal-statement" more="Read more" />
 
 # Advices
 
@@ -49,6 +51,7 @@ Don't miss to create a _Legal_ page within your website and precise the purpose 
 
 # Changelog
 
+* 2nd January 2018: version 0.1.4
 * 16th December 2017: version 0.1.3
 * 8th December 2017: version 0.1.2
 * 27th July 2017: version 0.1.1

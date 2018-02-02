@@ -6,7 +6,7 @@
  * @type:    Public
  * @prefs:   no
  * @order:   5
- * @version: 0.1.3
+ * @version: 0.1.4
  * @license: GPLv2
  */
 
@@ -44,39 +44,43 @@ function pat_eu_cookies_law($atts, $thing = null)
 	extract(lAtts(array(
 		'lang'         => substr(get_pref('language'), 0, 2),
 		'duration'     => '1 Month',
-		'force_reload' => false
+		'force_reload' => false,
+		'infos'        => false,
+		'more'         => false,
 	), $atts));
 
 	// js expression for force reload on demand
-	$force = ($force_reload ? "window.location='';" : "");
+	$force = ($force_reload ? ",window.location=''" : "");
+
 
 	// The default string entries for international translation
-	$default = array(
-			'refuse' => 'You refuse external third-party cookies: none, at the initiative of this site, is present on your device.', 
-			'msg' => 'This website stores some third parts cookies within your device. You can <a href="#!" title="I accept the use of cookies and I close this message for '.$duration.'" id="ok-cookies">Accept</a> or <a href="#!" title="I refuse to use Cookies and a message will continue to appear" id="no-cookies">Refuse</a> them.',
+	$_default = array(
+			'refuse' => 'You refuse external third-party cookies: none, at the initiative of this site, are present into your device.', 
+			'msg' => 'This website stores some third parts cookies within your device. You can <a href="#!" title="I accept the use of cookies and I close this message" id="ok-cookies">Accept</a> or <a href="#!" title="I refuse to use Cookies and a message will continue to appear" id="no-cookies">Refuse</a> them.',
 			'remind' => 'Time remaining before Cookies automatic launch',
-			'no_allowed' => 'Currently, your browser is set to disable cookies (check preferences).'
+			'no_allowed' => 'Currently, your browser is set to disable cookies (check preferences).',
 			);
 
 	// Get content of the json translation file based on the 'lang' plugin's attribute
-	$json = @file_get_contents($path_to_site.'/json/pat_eu_cookies_law_'.$lang.'.json');
+	$json = @file_get_contents(hu.'json/pat_eu_cookies_law_'.$lang.'.json');
 
 	// Decode the json datas
-	if ($json) {
+	if (strlen($json) > 0) {
 		assert_string($json);
+		// An error comes below:
 		$json_datas = json_decode($json, true);
 	}
 
 	// Can we proceed? Simple test within the first json value
-	if (isset($json_datas['msg'])) {
+	if (json_last_error() === JSON_ERROR_NONE) {
 		// Loop throught the json
 		foreach ($json_datas as $key => $value) {
 			// Change default values by json ones
-			$default[$key] = $value;
+			$_default[$key] = $value;
 		}
 	}
 
-	return '<div class="pat_eu_cookies_law"><div id="msg-cookies"><p>'.$default['msg'].'<br /><span id="cookies-delay">'.$default['remind'].' <strong id="counter">1:00</strong></span></p></div> <p><span id="cookie-choices"></span></p></div>'.n._pat_eu_cookies_law_inject( $default['refuse'], $default['no_allowed'], $duration, $force );
+	return '<div class="pat_eu_cookies_law"><div id="msg-cookies"><p>'.$_default['msg'].'<br /><span id="cookies-delay">'.$_default['remind'].' <strong id="counter">1:00</strong>'.($infos ? ' <a href="'.hu.$infos.'">'.$more.'</a>' : '').'</span></p></div> <p><span id="cookie-choices"></span></p></div>'.n._pat_eu_cookies_law_inject( $_default['refuse'], $_default['no_allowed'], $duration, $force );
 
 }
 
@@ -108,7 +112,7 @@ function _pat_eu_cookies_law_inject($refuse, $no_allowed, $future, $force)
 	$out = <<<EOJ
 <script>
 /*! Simple EU Cookies Law Compliance without dependencies by cara-tm.com, 2017. MIT license - https://github.com/cara-tm/EU-Cookies-Law-Compliance/ */
-function EU_cookies_law(b){'use strict';function d(D){return document.getElementById('cookies-delay').innerHTML='',document.getElementById('msg-cookies').innerHTML=D}var f='$refuse',g='$future',l=window.location.hostname,n=navigator.language||navigator.browserLanguage,o=[{$prefs['pat_eu_cookies_law_countries']}],p=1,q=60,t=1,u=document.getElementById('ok-cookies'),v=document.getElementById('no-cookies');if(!1!==navigator.cookieEnabled){for(var x=function(){g=parseInt(g.substring(0,1));var D=new Date(new Date().setMonth(new Date().getMonth()+g));A('Ok',D),B(b),d('')},y=function(D){var E=new RegExp('(?:; )?'+D+'=([^;]*);?');return E.test(document.cookie)?decodeURIComponent(RegExp.$1):null},z=function(){C(),y(l)==='Ok'+l?(d(''),B(b)):y(l)==='No'+l&&d(f)},A=function(D,E){return document.cookie=l+'='+encodeURIComponent(D+l)+';expires='+E.toGMTString()},B=function(D){var E=[],F=document.getElementsByTagName('script')[0];if(!window.scriptHasRun){window.scriptHasRun=!0;for(var G=0;G<D.length;G++)0===D[G]&&window.scriptHasRun||(window.scriptHasRun=!0,E[G]=document.createElement('script'),E[G].src=D[G],document.getElementsByTagName('head')[0].appendChild(E[G])||F.parentNode.insertBefore(E[G],F))}},C=function(){if(null!==document.getElementById('counter')){var D=document.getElementById('counter');q--,null!==typeof D.innerHTML&&(D.innerHTML=(t-1).toString()+':'+(10>q?'0':'')+(q+'')),0<q?setTimeout(C,1e3):1<t,0==q&&(x(),d(''))}else null===document.getElementById('cookies-delay')?'':document.getElementById('cookies-delay').innerHTML=''},w=0;w<o.length;w++)if(o[w]===n.substring(0,2).toUpperCase()){break}z(),u.onclick=function(D){D.preventDefault(),x(D)},v.onclick=function(D){var E=new Date(new Date().setDate(new Date().getDate()+1));A('No',E),d(f),D.preventDefault(),window.location=''}}else d('$no_allowed')};
+function EU_cookies_law(b){'use strict';function d(D){return document.getElementById('cookies-delay').innerHTML='',document.getElementById('msg-cookies').innerHTML=D}var f='$refuse',g='$future',l=window.location.hostname,n=navigator.language||navigator.browserLanguage,o=[{$prefs['pat_eu_cookies_law_countries']}],p=1,q=60,t=1,u=document.getElementById('ok-cookies'),v=document.getElementById('no-cookies');if(!1!==navigator.cookieEnabled){for(var x=function(){g=parseInt(g.substring(0,1));var D=new Date(new Date().setMonth(new Date().getMonth()+g));A('Ok',D),B(b),d('')},y=function(D){var E=new RegExp('(?:; )?'+D+'=([^;]*);?');return E.test(document.cookie)?decodeURIComponent(RegExp.$1):null},z=function(){C(),y(l)==='Ok'+l?(d(''),B(b)):y(l)==='No'+l&&d(f)},A=function(D,E){return document.cookie=l+'='+encodeURIComponent(D+l)+';expires='+E.toGMTString()},B=function(D){var E=[],F=document.getElementsByTagName('script')[0];if(!window.scriptHasRun){window.scriptHasRun=!0;for(var G=0;G<D.length;G++)0===D[G]&&window.scriptHasRun||(window.scriptHasRun=!0,E[G]=document.createElement('script'),E[G].src=D[G],document.getElementsByTagName('head')[0].appendChild(E[G])||F.parentNode.insertBefore(E[G],F))}},C=function(){if(null!==document.getElementById('counter')){var D=document.getElementById('counter');q--,null!==typeof D.innerHTML&&(D.innerHTML=(t-1).toString()+':'+(10>q?'0':'')+(q+'')),0<q?setTimeout(C,1e3):1<t,0==q&&(x(),d(''))}else null===document.getElementById('cookies-delay')?'':document.getElementById('cookies-delay').innerHTML=''},w=0;w<o.length;w++)if(o[w]===n.substring(0,2).toUpperCase()){break}z(),u.onclick=function(D){D.preventDefault(),x(D)$force},v.onclick=function(D){var E=new Date(new Date().setDate(new Date().getDate()+1));A('No',E),d(f),D.preventDefault()$force}}else d('$no_allowed')};
 /*! Array of third part JS files to load */ 
 EU_cookies_law([$files]);
 </script>
