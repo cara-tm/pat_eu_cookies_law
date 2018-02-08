@@ -1,6 +1,8 @@
 # pat_eu_cookies_law
 EU Cookie Law Compliance: A Textpattern plugin for Third-Party Cookies.
 
+![pat_eu_cookies_law Widget](https://raw.githubusercontent.com/cara-tm/pat_eu_cookies_law/master/pat_eu_cookies_law_widget.png)
+
 A simple solution that respects the EU Cookies law. Concerns only the external third-party cookies (the purpose of this law) but preserves the objectives for web marketers.
 Displays a warning message for EU member visitors only. Displays explicit and responsible information messages.
 Offers to visitors a double choice: acceptance or refusal of Cookies. Automatically loads js files that generate third party external cookies after a 60 seconds delay on the lack of choice of visitors. 
