@@ -33,7 +33,7 @@ Note. The plugin use international translation by default if you don't use the c
 # JS files that generate cookies
 
 Some third-parties libraries generate external cookies. For example the Google Analytics script or the scripts used by Social Networks. Create such a file (or multiple ones) for this acceptance by your visitors in order to respect the EU Cookies law.
-You can find the [ga-lite script](https://github.com/cara-tm/pat_eu_cookies_law/blob/master/js/ga-lite.min.js) in this repository for your analytics as an example.
+You can find the [ga-lite script](https://github.com/cara-tm/pat_eu_cookies_law/blob/master/js/ga-lite.min.js) and the file to load (`file.js`) with your Google Analytics account number in this repository for your analytics as an example.
 
 # Advice
 
@@ -51,6 +51,7 @@ Don't miss to create a _Legal_ page within your website and precise the purpose 
 
 # Changelog
 
+* 3td January 2018: version 0.1.5
 * 2nd January 2018: version 0.1.4
 * 16th December 2017: version 0.1.3
 * 8th December 2017: version 0.1.2

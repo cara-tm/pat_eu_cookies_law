@@ -1,1 +1,6 @@
-{"msg":"Ce site enregistre des Cookies tiers externes sur votre appareil. Vous pouvez les <a href=\"#!\" title=\"J’accepte l’usage de &quot;Cookies&quot; et je ferme ce message\" id=\"ok-cookies\">Accepter</a> ou les <a href=\"#!\" title=\"Je refuse l’usage de &quot;Cookies&quot; et un message\r m’en informant continuera à apparaître\" id=\"no-cookies\">Refuser</a>.","refuse":"Vous refusez les \"Cookies\" tiers externes : aucun, à l’initiative de ce site, n’est présent sur votre appareil.","remind":"Délai restant avant l’acceptation automatique des \"Cookies\" :","no_allowed":"Votre navigateur est configuré pour interdire tous \"Cookies\" (veuillez corriger ses préférences)."}
+{
+	"msg": "Ce site enregistre des Cookies tiers externes sur votre appareil. Vous pouvez les <a href=\"#!\" title=\"J’accepte l’usage de Cookies et je ferme ce message\" class=\"tooltip tooltip-bottom tooltip-large\" id=\"ok-cookies\">Accepter<\/a> ou les <a href=\"#!\" title=\"Je refuse l’usage de Cookies et un message\r m’en informant s’affichera\" class=\"tooltip tooltip-bottom tooltip-large\" id=\"no-cookies\">Refuser<\/a>",
+	"remind": "Temps restant avant l’acceptation automatique des Cookies :",
+	"refuse": "Vous refusez les Cookies tiers externes : aucun, depuis ce site, n’est enregistré sur votre appareil.",
+	"no_allowed": "Votre navigateur est configuré pour interdire tous Cookies (veuillez corriger ses parametres)."
+}
