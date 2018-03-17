@@ -6,7 +6,7 @@
  * @type:    Public
  * @prefs:   no
  * @order:   5
- * @version: 0.1.5
+ * @version: 0.1.6
  * @license: GPLv2
  */
 
@@ -56,7 +56,8 @@ function pat_eu_cookies_law($atts, $thing = null)
 	// The default string entries for international translation
 	$_default = array(
 			'refuse' => 'You refuse external third-party cookies: none, at the initiative of this site, are present into your device.', 
-			'msg' => 'This website stores some third parts cookies within your device. You can <a href="#!" title="I accept the use of cookies and I close this message" id="ok-cookies">Accept</a> or <a href="#!" title="I refuse to use Cookies and a message will continue to appear" id="no-cookies">Refuse</a> them.',
+			'msg' => 'This website stores some third parts cookies within your device',
+            'links' => 'You can <a href="#!" title="I accept the use of cookies and I close this message" id="ok-cookies">Accept</a> or <a href="#!" title="I refuse to use Cookies and a message will continue to appear" id="no-cookies">Refuse</a> them.',
 			'remind' => 'Time remaining before Cookies automatic launch',
 			'no_allowed' => 'Currently, your browser is set to disable cookies (check preferences).',
 			);
@@ -80,7 +81,7 @@ function pat_eu_cookies_law($atts, $thing = null)
 		}
 	}
 
-	return '<div class="pat_eu_cookies_law"><div id="msg-cookies"><p>'.$_default['msg'].'<br /><span id="cookies-delay">'.$_default['remind'].' <strong id="counter">1:00</strong>'.($infos ? ' <a href="'.hu.$infos.'">'.$more.'</a>' : '').'</span></p></div> <p><span id="cookie-choices"></span></p></div>'.n._pat_eu_cookies_law_inject( $_default['refuse'], $_default['no_allowed'], $duration, $force );
+	return '<div class="pat_eu_cookies_law"><div id="msg-cookies"><p>'.$_default['msg'].' '.@get_pref('pat_eu_cookies_law_widjets').'. <br /><span id="cookies-delay">'.$_default['remind'].' <strong id="counter">1:00</strong>'.($infos ? ' <a href="'.hu.$infos.'">'.$more.'</a>' : '').'</span></p></div> <p><span id="cookie-choices"></span></p></div>'.n._pat_eu_cookies_law_inject( $_default['refuse'], $_default['no_allowed'], $duration, $force );
 
 }
 
@@ -136,12 +137,16 @@ function pat_eu_cookies_law_prefs()
 
 	$textarray['pat_eu_cookies_law_countries'] = 'List of EU country members codes';
 	$textarray['pat_eu_cookies_law_js'] = 'Comma separated list of js files to load';
+    $textarray['pat_eu_cookies_law_widjets'] = 'List of widgets with third part cookies';
 
 	if ( !safe_field('name', 'txp_prefs', "name='pat_eu_cookies_law_countries'") ) {
 		safe_insert('txp_prefs', "name='pat_eu_cookies_law_countries', val='\'AT\',\'BE\',\'BG\',\'HR\',\'CZ\',\'CY\',\'DK\',\'EE\',\'FI\',\'FR\',\'DE\',\'EL\',\'HU\',\'IE\',\'IT\',\'LV\',\'LT\',\'LU\',\'MT\',\'NL\',\'PL\',\'PT\',\'SK\',\'SI\',\'ES\',\'SE\',\'GB\',\'UK\'', type=1, event='admin', html='text_input', position=21");
 	}
 	if ( !safe_field('name', 'txp_prefs', "name='pat_eu_cookies_law_js'") ) {
 		safe_insert('txp_prefs', "name='pat_eu_cookies_law_js', val='".hu."js/file.js', type=1, event='admin', html='text_input', position=22");
+	}
+    if ( !safe_field('name', 'txp_prefs', "name='pat_eu_cookies_law_widjets'") ) {
+		safe_insert('txp_prefs', "name='pat_eu_cookies_law_widjets', val='', type=1, event='admin', html='text_input', position=23");
 	}
 
 }
