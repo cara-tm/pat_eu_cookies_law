@@ -81,7 +81,7 @@ function pat_eu_cookies_law($atts, $thing = null)
 		}
 	}
 
-	return '<div role="alertdialog" tabindex="0" aria-hidden="false" aria-describedby="pat_eu_cookies_law_message" class="pat_eu_cookies_law" id="pat_eu_cookies_law"><div id="msg-cookies"><p id="pat_eu_cookies_law_message">'.$_default['msg'].' '.@get_pref('pat_eu_cookies_law_widjets').'. <br />'.$_default['links'].'<br /><span id="cookies-delay">'.$_default['remind'].' <strong id="counter">1:00</strong>'.($infos ? ' <a href="'.hu.$infos.'">'.$more.'</a>' : '').'</span></p></div> <p><span id="cookie-choices"></span></p></div>'.n._pat_eu_cookies_law_inject( $_default['refuse'], $_default['no_allowed'], $duration, $force );
+	return '<div role="alertdialog" tabindex="-1" aria-hidden="false" class="pat_eu_cookies_law" id="pat_eu_cookies_law"><div id="msg-cookies"><p>'.$_default['msg'].' '.@get_pref('pat_eu_cookies_law_widjets').'. <br />'.$_default['links'].'<br /><span id="cookies-delay">'.$_default['remind'].' <strong id="counter">1:00</strong>'.($infos ? ' <a href="'.hu.$infos.'">'.$more.'</a>' : '').'</span></p></div> <p><span id="cookie-choices"></span></p></div>'.n._pat_eu_cookies_law_inject( $_default['refuse'], $_default['no_allowed'], $duration, $force );
 
 }
 
