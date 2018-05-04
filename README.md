@@ -53,6 +53,7 @@ Don't miss to create a _Legal_ page within your website and precise the purpose 
 
 # Changelog
 
+* 17th March 2018: version 0.1.6
 * 3td January 2018: version 0.1.5
 * 2nd January 2018: version 0.1.4
 * 16th December 2017: version 0.1.3
