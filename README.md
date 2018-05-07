@@ -47,6 +47,74 @@ Best place into a page template (perhaps into your "footer"):
 
     <txp:pat_eu_cookies_law lang="en" duration="2 Months" force_reload="1" infos="legal-statement" more="Read more" />
 
+# CSS sample
+
+Here is a starting point for your 'Cookies' widget:
+
+    #msg-cookies {
+        position: relative;
+        z-index: 2002;
+        float: left;
+        width: 98%;
+        padding: 0 1%;
+        color: #c5c5c5;
+        line-height: 1.5
+    }
+    @media only screen and (max-width: 519px) {
+    
+        #msg-cookies {
+            margin-top: -6em;
+            margin-bottom: 6em
+        }
+    
+    }
+    #msg-cookies p:before{
+	    content: '🍪';
+	    padding-right: .15em
+    }
+    #msg-cookies p {
+        position: absolute;
+        position: fixed;
+        z-index: 10012;
+        left: 2%;
+        bottom: -4px;
+        width: 60%;
+        max-height: calc(100% - 48px);
+        max-width: calc(100% - 48px);
+        margin: 24px auto;
+        padding: 8px;
+        background: #fff;
+        color: #757575;
+        font: normal normal normal 14px/40px 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+        border-radius: 2px;
+        box-shadow: 0 17px 17px rgba(0,0,0,.15), 0 27px 55px rgba(0,0,0,.3)
+    }
+    @media only screen and (max-width: 740px) {
+    
+        #msg-cookies p {
+            left: 0;
+            bottom: 6em;
+            max-width: none;
+            width: 94%;
+            margin: 0 1%
+        }
+    
+    }
+    #msg-cookies p a {
+        display: inline-table;
+        padding: 0 8px;
+        background-color: transparent;
+        border: 1px solid #f2f2f2;
+        vertical-align: baseline;
+        text-overflow: ellipsis;
+        text-transform: uppercase;
+        white-space: nowrap;
+        color: #039be5;
+        box-shadow: none;
+        transition: background-color .2s, box-shadow .2s
+    }
+ 
+
 # Advices
 
 Don't miss to create a _Legal_ page within your website and precise the purpose and the use of external third-party Cookies; the delay for automatic acceptance of the use of Cookies stored into the visitor's device; and the keeping time for Cookies acceptances and future visits. Thus, you will be into the total respect of the EU law and the respect of legal informations for your visitors.
