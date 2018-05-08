@@ -56,7 +56,7 @@ function pat_eu_cookies_law($atts, $thing = null)
 	// The default string entries for international translation
 	$_default = array(
 			'msg' => 'This website stores some third parts cookies within your device',
-			'links' => 'You can <a href="#!" title="I accept the use of cookies and I close this message" id="ok-cookies">Accept</a> or <a href="#!" title="I refuse to use Cookies and a message will continue to appear" id="no-cookies">Refuse</a> them.',
+			'links' => 'You can <a role="button" tabindex="1" href="#!" title="I accept the use of cookies and I close this message" id="ok-cookies">Accept</a> or <a role="button" tabindex="2" href="#!" title="I refuse to use Cookies and a message will continue to appear" id="no-cookies">Refuse</a> them.',
 			'remind' => 'Time remaining before Cookies automatic launch',
 			'refuse' => 'You refuse external third-party cookies: none, at the initiative of this site, are present into your device',
 			'no_allowed' => 'Currently, your browser is set to disable cookies (check preferences).',
