@@ -119,6 +119,10 @@ Here is a starting point for your 'Cookies' widget:
 
 Don't miss to create a _Legal_ page within your website and precise the purpose and the use of external third-party Cookies; the delay for automatic acceptance of the use of Cookies stored into the visitor's device; and the keeping time for Cookies acceptances and future visits. Thus, you will be into the total respect of the EU law and the respect of legal informations for your visitors.
 
+# GDPR
+
+https://eugdprcompliant.com/cookies-consent-gdpr/
+
 # Changelog
 
 * 17th March 2018: version 0.1.6
