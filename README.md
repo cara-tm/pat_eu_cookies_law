@@ -64,9 +64,7 @@ Here is a starting point for your 'Cookies' widget:
 	max-height: calc(100% - 48px);
 	margin: 24px auto;
 	padding: 1em;
-	text-align: center;
-	border-radius: 2px;
-	box-shadow: 0 17px 17px rgba(0,0,0,.15),0 27px 55px rgba(0,0,0,.3)
+	text-align: center
     }
 
     @media only screen and (max-width: 689px) {
@@ -79,7 +77,6 @@ Here is a starting point for your 'Cookies' widget:
 		max-width: none;
 		max-height: none;
 		margin: 0 1% 0;
-		margin-bottom: 6em;
 		padding: 8px 0
 	}
 
@@ -92,8 +89,13 @@ Here is a starting point for your 'Cookies' widget:
     }
 
     #msg-cookies {
-	width: 100%;
-	color: #979797
+	width: 93%;
+	color: #979797;
+	border: 1px solid #eee;
+	border-radius: 2px;
+	-moz-box-shadow:  0 17px 17px rgba(0,0,0,.15), 0 5px 10px rgba(0,0,0,.2);
+	-webkit-box-shadow:  0 17px 17px rgba(0,0,0,.15), 0 5px 10px rgba(0,0,0,.2);
+	box-shadow: 0 17px 17px rgba(0,0,0,.15), 0 5px 10px rgba(0,0,0,.2)
     }
 
     #msg-cookies p {
