@@ -51,68 +51,91 @@ Best place into a page template (perhaps into your "footer"):
 
 Here is a starting point for your 'Cookies' widget:
 
+    #pat_eu_cookies_law {
+	overflow: auto;
+	position: absolute;
+	position: fixed;
+	z-index: 10012;
+	left: 2%;
+	bottom: 5px;
+	width: 60%;
+	max-width: calc(100% - 48px);
+	height: auto;
+	max-height: calc(100% - 48px);
+	margin: 24px auto;
+	padding: 1em;
+	text-align: center;
+	border-radius: 2px;
+	box-shadow: 0 17px 17px rgba(0,0,0,.15),0 27px 55px rgba(0,0,0,.3)
+    }
+
+    @media only screen and (max-width: 689px) {
+
+    		#pat_eu_cookies_law {
+		overflow: initial;
+		position: relative;
+		left: 0;
+		width: 98%;
+		max-width: none;
+		max-height: none;
+		margin: 0 1% 0;
+		margin-bottom: 6em;
+		padding: 8px 0
+		}
+
+    }
+
+    @media only screen and (max-height: 500px) {
+
+		#pat_eu_cookies_law {position: static}
+
+    }
+
     #msg-cookies {
-        position: relative;
-        z-index: 2002;
-        float: left;
-        width: 98%;
-        padding: 0 1%;
-        color: #c5c5c5;
-        line-height: 1.5
+	width: 100%;
+	color: #979797
     }
-    @media only screen and (max-width: 519px) {
-    
-        #msg-cookies {
-            margin-top: -6em;
-            margin-bottom: 6em
-        }
-    
+
+    #msg-cookies p {
+	background: #fff;
+	color: #757575;
+	font: 14px/30px 'Open Sans','Helvetica Neue','HelveticaNeue',Helvetica,Arial,sans-serif
     }
+
     #msg-cookies p:before{
 	    content: '🍪';
 	    padding-right: .15em
     }
-    #msg-cookies p {
-        position: absolute;
-        position: fixed;
-        z-index: 10012;
-        left: 2%;
-        bottom: -4px;
-        width: 60%;
-        max-height: calc(100% - 48px);
-        max-width: calc(100% - 48px);
-        margin: 24px auto;
-        padding: 8px;
-        background: #fff;
-        color: #757575;
-        font: normal normal normal 14px/40px 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
-        border-radius: 2px;
-        box-shadow: 0 17px 17px rgba(0,0,0,.15), 0 27px 55px rgba(0,0,0,.3)
-    }
+
     @media only screen and (max-width: 740px) {
-    
-        #msg-cookies p {
-            left: 0;
-            bottom: 6em;
-            max-width: none;
-            width: 94%;
-            margin: 0 1%
-        }
-    
+
+		#msg-cookies p {
+			left: 0;
+			max-width: none;
+			width: 94%;
+			margin: 0 1% 
+		}
+
     }
+
     #msg-cookies p a {
-        display: inline-table;
-        padding: 0 8px;
-        background-color: transparent;
-        border: 1px solid #f2f2f2;
-        vertical-align: baseline;
-        text-overflow: ellipsis;
-        text-transform: uppercase;
-        white-space: nowrap;
-        color: #039be5;
-        box-shadow: none;
-        transition: background-color .2s, box-shadow .2s
+	padding: 8px;
+	background-color: transparent;
+	vertical-align: middle;
+	text-overflow: ellipsis;
+	text-transform: uppercase;
+	white-space: nowrap;
+	color: #039be5;
+	box-shadow: none;
+	transition: background-color .2s,box-shadow .2s 
     }
+
+    #msg-cookies a:hover {
+	background-color: rgb(223,241,250);
+	color:#039be5;
+	box-shadow: 0 0 1px #039be5 
+    }
+
  
 
 # Advices
