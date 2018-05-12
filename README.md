@@ -71,7 +71,7 @@ Here is a starting point for your 'Cookies' widget:
 
     @media only screen and (max-width: 689px) {
 
-    		#pat_eu_cookies_law {
+    	#pat_eu_cookies_law {
 		overflow: initial;
 		position: relative;
 		left: 0;
@@ -81,7 +81,7 @@ Here is a starting point for your 'Cookies' widget:
 		margin: 0 1% 0;
 		margin-bottom: 6em;
 		padding: 8px 0
-		}
+	}
 
     }
 
@@ -102,7 +102,7 @@ Here is a starting point for your 'Cookies' widget:
 	font: 14px/30px 'Open Sans','Helvetica Neue','HelveticaNeue',Helvetica,Arial,sans-serif
     }
 
-    #msg-cookies p:before{
+    #msg-cookies p:first-child::before {
 	    content: '🍪';
 	    padding-right: .15em
     }
