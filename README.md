@@ -90,6 +90,7 @@ Here is a starting point for your 'Cookies' widget:
 
     #msg-cookies {
 	width: 93%;
+	padding: 1em 0;
 	color: #979797;
 	border: 1px solid #eee;
 	border-radius: 2px;
