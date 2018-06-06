@@ -4,4 +4,5 @@
 })(window,document,"galite","script","ga-lite@2.0.1.min.js");
 
 galite('create', 'UA-XXXXXXXX-X', 'auto');
+galite('set', 'anonymizeIp', true);
 galite('send', 'pageview');
