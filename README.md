@@ -63,12 +63,19 @@ Here is a starting point for your 'Cookies' widget:
 	left: 2%;
 	bottom: 5px;
 	width: 60%;
+	min-width: 450px;
+	max-width: 48em;
 	max-width: calc(100% - 48px);
 	height: auto;
 	max-height: calc(100% - 48px);
 	margin: 24px auto;
 	padding: 1em;
-	text-align: center
+	text-align: center;
+	cursor: default;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
     }
 
     @media only screen and (max-width: 689px) {
@@ -78,15 +85,16 @@ Here is a starting point for your 'Cookies' widget:
 		position: relative;
 		left: 0;
 		width: 98%;
+		min-width: 0;
 		max-width: none;
 		max-height: none;
 		margin: 0 1% 0;
 		padding: 8px 0
-	}
+    	}
 
     }
 
-    @media only screen and (max-height: 500px) {
+    @media only screen and (max-height: 500px)  and (max-width: 520px) {
 
 		#pat_eu_cookies_law {position: static}
 
@@ -106,12 +114,20 @@ Here is a starting point for your 'Cookies' widget:
     #msg-cookies p {
 	background: #fff;
 	color: #757575;
-	font: 14px/30px 'Open Sans','Helvetica Neue','HelveticaNeue',Helvetica,Arial,sans-serif
+	font: 14px/20px 'Open Sans','Helvetica Neue','HelveticaNeue',Helvetica,Arial,sans-serif
     }
 
     #msg-cookies p:first-child::before {
 	    content: '🍪';
-	    padding-right: .15em
+	    width: auto;
+	    height: 1em;
+	    margin-right: .2em;
+	    padding-right: .15em;
+	    vertical-align: middle;
+	    color: #dda000;
+	    font-size: 1.4em;
+	    line-height: 1;
+	    text-shadow:0 0 0 #dda000
     }
 
     @media only screen and (max-width: 740px) {
@@ -126,21 +142,36 @@ Here is a starting point for your 'Cookies' widget:
     }
 
     #msg-cookies p a {
-	padding: 8px;
+	display: inline-block;
+	width: auto;
+	margin: .2em 0;
+	padding: 6px 8px;
 	background-color: transparent;
+	border: 1px solid #d7f2fe;
 	vertical-align: middle;
 	text-overflow: ellipsis;
 	text-transform: uppercase;
 	white-space: nowrap;
 	color: #039be5;
+	cursor: pointer;
 	box-shadow: none;
 	transition: background-color .2s,box-shadow .2s 
     }
 
     #msg-cookies a:hover {
 	background-color: rgb(223,241,250);
+	tex-decoration: none;
 	color:#039be5;
 	box-shadow: 0 0 1px #039be5 
+    }
+    
+    #pat_result-cookies {
+	position: absolute;
+	bottom: 10px;
+	width: 98%;
+	margin: 0 1%;
+	text-align: center;
+	font: normal normal normal 100%/1.2 'Helvetica Neue', 'HelveticaNeue', Helvetica, Arial, sans-serif
     }
 
  
