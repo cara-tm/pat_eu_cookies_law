@@ -101,20 +101,20 @@ Here is a starting point for your 'Cookies' widget:
     }
 
     #msg-cookies {
-	width: 93%;
-	padding: 1em 0;
-	color: #979797;
-	border: 1px solid #eee;
-	border-radius: 2px;
-	-moz-box-shadow:  0 17px 17px rgba(0,0,0,.15), 0 5px 10px rgba(0,0,0,.2);
-	-webkit-box-shadow:  0 17px 17px rgba(0,0,0,.15), 0 5px 10px rgba(0,0,0,.2);
-	box-shadow: 0 17px 17px rgba(0,0,0,.15), 0 5px 10px rgba(0,0,0,.2)
+    	width: 93%;
+    	padding: 1em 0;
+    	color: #979797;
+    	border: 1px solid #eee;
+    	border-radius: 2px;
+    	-moz-box-shadow:  0 17px 17px rgba(0,0,0,.15), 0 5px 10px rgba(0,0,0,.2);
+    	-webkit-box-shadow:  0 17px 17px rgba(0,0,0,.15), 0 5px 10px rgba(0,0,0,.2);
+    	box-shadow: 0 17px 17px rgba(0,0,0,.15), 0 5px 10px rgba(0,0,0,.2)
     }
 
     #msg-cookies p {
-	background: #fff;
-	color: #757575;
-	font: 14px/20px 'Open Sans','Helvetica Neue','HelveticaNeue',Helvetica,Arial,sans-serif
+    	background: #fff;
+    	color: #757575;
+    	font: 14px/20px 'Open Sans','Helvetica Neue','HelveticaNeue',Helvetica,Arial,sans-serif
     }
 
     #msg-cookies p:first-child::before {
@@ -141,36 +141,36 @@ Here is a starting point for your 'Cookies' widget:
     }
 
     #msg-cookies p a {
-	display: inline-block;
-	width: auto;
-	margin: .2em 0;
-	padding: 6px 8px;
-	background-color: transparent;
-	border: 1px solid #d7f2fe;
-	vertical-align: middle;
-	text-overflow: ellipsis;
-	text-transform: uppercase;
-	white-space: nowrap;
-	color: #039be5;
-	cursor: pointer;
-	box-shadow: none;
-	transition: background-color .2s,box-shadow .2s 
+    	display: inline-block;
+    	width: auto;
+    	margin: .2em 0;
+    	padding: 6px 8px;
+    	background-color: transparent;
+    	border: 1px solid #d7f2fe;
+    	vertical-align: middle;
+    	text-overflow: ellipsis;
+    	text-transform: uppercase;
+    	white-space: nowrap;
+    	color: #039be5;
+    	cursor: pointer;
+    	box-shadow: none;
+    	transition: background-color .2s,box-shadow .2s 
     }
 
     #msg-cookies a:hover {
-	background-color: rgb(223,241,250);
-	tex-decoration: none;
-	color:#039be5;
-	box-shadow: 0 0 1px #039be5 
+    	background-color: rgb(223,241,250);
+    	tex-decoration: none;
+    	color:#039be5;
+    	box-shadow: 0 0 1px #039be5 
     }
     
     #pat_result-cookies {
-	position: absolute;
-	bottom: 10px;
-	width: 98%;
-	margin: 0 1%;
-	text-align: center;
-	font: normal normal normal 100%/1.2 'Helvetica Neue', 'HelveticaNeue', Helvetica, Arial, sans-serif
+    	position: absolute;
+    	bottom: 10px;
+    	width: 98%;
+    	margin: 0 1%;
+    	text-align: center;
+    	font: normal normal normal 100%/1.2 'Helvetica Neue', 'HelveticaNeue', Helvetica, Arial, sans-serif
     }
 
  
