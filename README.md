@@ -12,6 +12,10 @@ Detects the ban of all cookies based on the browser's preferences.
 Support for translations with JSON files.
 Low impact that preserves the speed of page display. Pure javascript without requiring third-party libraries.
 
+_To Do (next version)_:
+* _Ability to display a message if javascript is desabled in the browser_;
+* _Use of LocalStorage for modern browsers and keep cookie creation for old ones_.
+
 # Plugin Preferences
 
 After plugin installation and activation, visit your _Site Preferences_ page to set:
