@@ -122,7 +122,6 @@ Here is a starting point for your 'Cookies' widget:
 	    width: auto;
 	    height: 1em;
 	    margin-right: .2em;
-	    padding-right: .15em;
 	    vertical-align: middle;
 	    color: #dda000;
 	    font-size: 1.4em;
