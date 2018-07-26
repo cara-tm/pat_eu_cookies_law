@@ -56,26 +56,26 @@ Best place into a page template (perhaps into your "footer"):
 Here is a starting point for your 'Cookies' widget:
 
     #pat_eu_cookies_law {
-	overflow: auto;
-	position: absolute;
-	position: fixed;
-	z-index: 10012;
-	left: 2%;
-	bottom: 5px;
-	width: 60%;
-	min-width: 450px;
-	max-width: 48em;
-	max-width: calc(100% - 48px);
-	height: auto;
-	max-height: calc(100% - 48px);
-	margin: 24px auto;
-	padding: 1em;
-	text-align: center;
-	cursor: default;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none
+    	overflow: auto;
+    	position: absolute;
+    	position: fixed;
+    	z-index: 10012;
+    	left: 2%;
+    	bottom: 5px;
+    	width: 60%;
+    	min-width: 450px;
+    	max-width: 48em;
+    	max-width: calc(100% - 48px);
+    	height: auto;
+    	max-height: calc(100% - 48px);
+    	margin: 24px auto;
+    	padding: 1em;
+    	text-align: center;
+    	cursor: default;
+    	-webkit-user-select: none;
+    	-moz-user-select: none;
+    	-ms-user-select: none;
+    	user-select: none
     }
 
     @media only screen and (max-width: 689px) {
