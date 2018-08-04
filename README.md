@@ -68,7 +68,6 @@ Here is a starting point for your 'Cookies' widget:
     	max-width: 48em;
     	max-width: calc(100% - 48px);
     	height: auto;
-    	max-height: calc(100% - 48px);
     	margin: 24px auto;
     	padding: 1em;
     	text-align: center;
