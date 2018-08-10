@@ -34,7 +34,7 @@ Note. The plugin use international translation by default if you don't use the c
 * `lang` (string): the 4 letters language choice for localisation (i.e. `lang="en-us"`). Default: the active language preference sets within the Textpattern _Languages_ page.
 * `duration` (string or integer): the delay in months for the saving user's choice. Default: `1 Month` (can be set with a number only. i.e. `1`).
 * `force_reload` (boolean `1` or `0`): if set to `1` (true) the page will be reloaded on user acceptation. Default: `0`(false).
-* `infos` (string): a section name where you want to display your legal staatement or confidential policy. That attribute create a link after the counting delay. Defaut: empty (no link creation).
+* `infos` (string) [named: `section` in v 0.1.7]: a section name where you want to display your legal staatement or confidential policy. That attribute create a link after the counting delay. Defaut: empty (no link creation).
 * `more` (string): the label of the link above for translation conveniencies. Default: empty.
 
 # JS files that generate cookies
