@@ -101,51 +101,51 @@ Here is a starting point for your 'Cookies' widget:
     }
     
     .animated {
-    	-webkit-animation-duration: 1s;
-	animation-duration: 1s;
-	-webkit-animation-fill-mode: both;
-	animation-fill-mode: both
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both
     }
     
     @-webkit-keyframes fadeInUp {
-    	from {
-		opacity: 0;
-		-webkit-transform: translate3d(0, 100%, 0);
-		transform: translate3d(0, 100%, 0)
-	}
-	to {
-		opacity: 1;
-		-webkit-transform: translate3d(0, 0, 0);
-		transform: translate3d(0, 0, 0)
-	}
+        from {
+	    opacity: 0;
+	    -webkit-transform: translate3d(0, 100%, 0);
+	    transform: translate3d(0, 100%, 0)
+        }
+        to {
+	    opacity: 1;
+	    -webkit-transform: translate3d(0, 0, 0);
+	    transform: translate3d(0, 0, 0)
+        }
     }
     
     @keyframes fadeInUp {
-    	from {
-		opacity: 0;
-		-webkit-transform: translate3d(0, 100%, 0);
-		transform: translate3d(0, 100%, 0)
-	}
-	to {
-		opacity: 1;
-		-webkit-transform: translate3d(0, 0, 0);
-		transform: translate3d(0, 0, 0)
-	}
+        from {
+	    opacity: 0;
+	    -webkit-transform: translate3d(0, 100%, 0);
+	    transform: translate3d(0, 100%, 0)
+        }
+        to {
+	    opacity: 1;
+	    -webkit-transform: translate3d(0, 0, 0);
+	    transform: translate3d(0, 0, 0)
+        }
     }
     
     .fadeInUp {
-    	-webkit-animation-name: fadeInUp;
-	animation-name: fadeInUp
+        -webkit-animation-name: fadeInUp;
+        animation-name: fadeInUp
     }
     
     @media (prefers-reduced-motion) {
     
-    	html .animated {
-		-webkit-animation: unset;
-		animation: unset;
-		-webkit-transition: none;
-		transition: none
-	}
+        html .animated {
+	        -webkit-animation: unset;
+	        animation: unset;
+	        -webkit-transition: none;
+	        transition: none
+        }
 
     }
 
