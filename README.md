@@ -188,6 +188,7 @@ https://eugdprcompliant.com/cookies-consent-gdpr/
 
 # Changelog
 
+* 9th August 2018: pre-release v0.1.7: two methods included (localStorage or Cookie), widget injected from a "micro js template engine", disabled javascript detection within the browser (warning message). 
 * 17th March 2018: version 0.1.6
 * 3td January 2018: version 0.1.5
 * 2nd January 2018: version 0.1.4
