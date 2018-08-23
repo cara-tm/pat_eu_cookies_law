@@ -14,6 +14,7 @@ Low impact that preserves the speed of page display. Pure javascript without req
 
 ## _To Do (next version)_:
 * ~~_Ability to display a message if javascript is desabled in the browser_~~ (done);
+* ~~Ability to show a message if cookies support is disabled within the browser~~ (done);
 * ~~_Injection into the HTML document as a whole widget (without the need to create the base markup)_~~ (done with a js micro template engine);
 * ~~_Use of LocalStorage for modern browsers (Google Chromium 4+, FireFox 3.5+, Safari 4+, Opera 10.5+, IE 8+, iOS 3.2+, Android 2.1+, Opera Mobile 11+) and keep cookie creation for old ones_~~ (done);
 * ~~Ability to choose automatic loading for external js files or not, ability to show the widget on demand~~ (done);
