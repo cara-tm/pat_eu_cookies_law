@@ -20,7 +20,7 @@ Low impact that preserves the speed of page display. Pure javascript without req
 * ~~Ability to choose automatic loading for external js files or not, ability to show the widget on demand~~ (done);
 * ~~Avoid loading external js files for TXP users connected~~ (done);
 * ~~Load external js files by default for non EU member visitors~~ (done);
-* Create a Geolocalisation for non EU residents surfing from a EU member country;
+* ~~Create a Geolocalisation for non EU residents surfing from a EU member country~~ (done);
 * Shrink the plugin script in 2 parts to reduce the amount of code injection;
 * Create a back-admin page for the plugin settings.
 
