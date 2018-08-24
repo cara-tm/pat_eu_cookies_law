@@ -18,6 +18,7 @@ Low impact that preserves the speed of page display. Pure javascript without req
 * ~~_Injection into the HTML document as a whole widget (without the need to create the base markup)_~~ (done with a js micro template engine);
 * ~~_Use of LocalStorage for modern browsers (Google Chromium 4+, FireFox 3.5+, Safari 4+, Opera 10.5+, IE 8+, iOS 3.2+, Android 2.1+, Opera Mobile 11+) and keep cookie creation for old ones_~~ (done);
 * ~~Ability to choose automatic loading for external js files or not, ability to show the widget on demand~~ (done);
+* ~~Identify logging-in users and do not load external js files (to avoid unnecessary trackings)~~ (done);
 * ~~Avoid loading external js files for TXP users connected~~ (done);
 * ~~Load external js files by default for non EU member visitors~~ (done);
 * ~~Create a Geolocalisation for non EU residents surfing from a EU member country~~ (done);
