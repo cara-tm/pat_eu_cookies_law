@@ -23,7 +23,7 @@ Low impact that preserves the speed of page display. Pure javascript without req
 * ~~Load external js files by default for non EU member visitors~~ (done);
 * ~~Create a Geolocalisation for non EU residents surfing from a EU member country~~ (done);
 * ~~Shrink the plugin script in 2 parts to reduce the amount of code injection~~ (some: reduicing the script to get 4947 bytes size and 2159 bytes gziped);
-* ~~Create a tag in order to remove on demand markers ; create a bookmarklet for easy cross domain markers deletion ~~ (done);
+* ~~Create a tag in order to remove on demand markers ; create a bookmarklet for easy cross domain markers deletion~~ (done);
 * Create a back-admin page for the plugin settings.
 
 # Plugin Preferences
