@@ -12,7 +12,7 @@ Detects the ban of all cookies based on the browser's preferences.
 Support for translations with JSON files.
 Low impact that preserves the speed of page display. Pure javascript without requiring third-party libraries.
 
-## _To Do (next version)_:
+## _To Do (in process next version)_:
 * ~~_Ability to display a message if javascript is desabled in the browser_~~ (done);
 * ~~Ability to show a message if cookies support is disabled within the browser~~ (done);
 * ~~_Injection into the HTML document as a whole widget (without the need to create the base markup)_~~ (done with a js micro template engine);
@@ -22,7 +22,7 @@ Low impact that preserves the speed of page display. Pure javascript without req
 * ~~Avoid loading external js files for TXP users connected~~ (done);
 * ~~Load external js files by default for non EU member visitors~~ (done);
 * ~~Create a Geolocalisation for non EU residents surfing from a EU member country~~ (done);
-* ~~Shrink the plugin script in 2 parts to reduce the amount of code injection~~ (some: reduicing the script to get 4947 bytes size and 2159 bytes gziped);
+* ~~Shrink the plugin script in 2 parts to reduce the amount of code injection~~ (some: reduicing the script to get 4892 bytes and 2149 bytes gziped);
 * ~~Create a tag in order to remove on demand markers ; create a bookmarklet for easy cross domain markers deletion~~ (done);
 * Create a back-admin page for the plugin settings.
 
