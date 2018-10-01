@@ -24,6 +24,7 @@ Low impact that preserves the speed of page display. Pure javascript without req
 * ~~Shrink the plugin script in 2 parts to reduce the amount of code injection~~ (some: reduicing the script to get 4892 bytes and 2149 bytes gziped);
 * ~~Add a setting to create sha384 hashes for each integrity attributes into script links (optional)~~ (done);
 * ~~Create a tag in order to remove on demand markers ; create a bookmarklet for easy cross domain markers deletion~~ (done);
+* ~~Protect script against XSS Attack~~ (done);
 * Ability to load external files before user's choice (optional);
 * Consider Google AMP support (with the use of pat_if_amp);
 * Create a back-admin page for the plugin settings.
