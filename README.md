@@ -1,5 +1,5 @@
 # pat_eu_cookies_law
-EU Cookie Law Compliance: A Textpattern plugin for Third-Party Cookies.
+EU Cookie Law Compliance: A Textpattern plugin (or a standalone script) for Third-Party Cookies.
 
 ![pat_eu_cookies_law Widget](https://raw.githubusercontent.com/cara-tm/pat_eu_cookies_law/master/pat_eu_cookies_law_widget.png)
 
@@ -11,6 +11,35 @@ Promotes a subtil acceptance of Cookies : displays a message for refusals only b
 Detects the ban of all cookies based on the browser's preferences.
 Support for translations with JSON files.
 Low impact that preserves the speed of page display. Pure javascript without requiring third-party libraries.
+
+## Standalone version (new)
+
+You may prefer to use the inbuilt flat links offer by Textpattern (onward 4.7.2 version), so check the /standalone directory for javascript file (English & French version): vanilla js with no dependencies, tiny script (9 Kb with 5Kb of CSS included), cross-browsers (IE8 capable), simple but beautiful widget with animations, variables available for i18n translation in any languages.
+
+Check the `/test/` directory for a page sample.
+
+## Standalone features
+
+Tiny with no dependencies;
+Cross-browsers support (IE8 minimum);
+First lines variables for easy translations;
+Loader included for external ressources which provide third party cookies;
+Acceptence and Decline links are offer to vistors;
+Decreasing counter included (can be set, max value 61 seconds) for automatic loading external ressources to pasive visitors (convenience for all web marketers);
+Display the widget for the UE members only (based on the visitors browser language prefernces, 2 letters country codes available for changes), all other visitors will be not notified.
+
+Standalone installation within TXP
+
+First, activate "Advanced options" in the "Admin" preferences section in your Textpattern admin interface. Then, uncomment (remove the first `;` signs in each lines) the default configuration for javascript support. Create a new form (with "Javascript" type) named `cookies_law_en.js` and paste  the entire code from this github `/standalone/EU_cookies_law_en.js` directory. Done!
+
+Now call this new form with its minimal necessary markup where you want to display the "GPRD compliance widget", maybe just before you page footers (recommanded usage):
+
+    <txp:if_section name="legal-statement"><txp:else />
+        <div role="alertdialog" tabindex="-1" aria-hidden="false" class="pat-eu-cookies-law" id="pat-eu-cookies-law"></div><noscript><p class="txt-c" aria-hidden="true">Please enable javascript from your browser settings.</p></noscript><p id="cookies-info"></p>
+        <txp:output_form form='cookies_law_en.js' format="flat.script" defer />
+    </txp:if_section>
+
+# Plugin Preferences (plugin version)
 
 ## _To Do (in process next version)_:
 * ~~_Ability to display a message if javascript is desabled in the browser_~~ (done);
