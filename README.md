@@ -16,7 +16,7 @@ Low impact that preserves the speed of page display. Pure javascript without req
 
 You may prefer to use the inbuilt flat links offer by Textpattern (onward 4.7.2 version), so check the /standalone directory for javascript file (English & French version): vanilla js with no dependencies, tiny script (9 Kb with 5Kb of CSS included), cross-browsers (IE8 capable), simple but beautiful widget with animations, variables available for i18n translation in any languages.
 
-Check the `/test/` directory for a page sample.
+Check the `/test/` directory for a page sample (and further advices).
 
 ## Standalone features
 
@@ -36,7 +36,7 @@ Now call this new form with its minimal necessary markup where you want to displ
 
     <txp:if_section name="legal-statement"><txp:else />
         <div role="alertdialog" tabindex="-1" aria-hidden="false" class="pat-eu-cookies-law" id="pat-eu-cookies-law"></div><noscript><p class="txt-c" aria-hidden="true">Please enable javascript from your browser settings.</p></noscript><p id="cookies-info"></p>
-        <txp:output_form form='cookies_law_en.js' format="flat.script" defer />
+        <txp:output_form form='cookies_law_en.js' format="flat.script" async />
     </txp:if_section>
 
 # Plugin Preferences (plugin version)
