@@ -20,13 +20,14 @@ Check the `/test/` directory for a page sample (and further advices).
 
 ## Standalone features
 
-Tiny with no dependencies;
-Cross-browsers support (IE8 minimum);
-First lines variables for easy translations;
-Loader included for external ressources which provide third party cookies;
-Acceptence and Decline links are offer to vistors;
-Decreasing counter included (can be set, max value 61 seconds) for automatic loading external ressources to pasive visitors (convenience for all web marketers);
-Display the widget for the UE members only (based on the visitors browser language prefernces, 2 letters country codes available for changes), all other visitors will be not notified.
+* Tiny with no dependencies;
+* Includes an extremly light "Javascript Template Engine";
+* Cross-browsers support (IE7 minimum);
+* First lines variables for easy translations;
+* Loader included for external ressources which provide third party cookies;
+* Acceptence and Decline links are offer to vistors;
+* Decreasing counter included (can be set, max value 61 seconds) for automatic loading external ressources to pasive visitors (convenience for all web marketers);
+* Display the widget for the UE members only (based on the visitors browser language prefernces, 2 letters country codes available for changes), all other visitors will be not notified.
 
 Standalone installation within TXP
 

@@ -3,7 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover">
 <meta charset="UTF-8">
-<title>EU GPRD Compliance for Third PArty Cookies</title>
+<title>EU GDPR Compliance for Third Party Cookies</title>
 <meta name="robots" content="index">
 
 <meta name="description" content="">
@@ -16,8 +16,9 @@
 
 <script>var arr=['article','aside','footer','header','nav','picture','section','figcaption','figure','main','small','template'];for(var i=0;i<arr.length;i++) document.createElement(arr[i]);</script>
 
-<!-- Not needed: just a test for support (or inconsistencies) with a well known CSS Framework -->
+<!-- Not needed: just a test for support (or inconsistencies) with a well known CSS Framework
 <link href="https://getbootstrap.com/2.3.2/assets/css/bootstrap.css" rel="stylesheet">
+-->
 
 <style>
 
@@ -30,7 +31,7 @@ html {
 	cursor: default
 }
 
-html {font-size: 2.6vw}
+html {font-size: 16px;font-size: 2.6vw}
 @media all and (min-width:1000px) { html {font-size: 22px} }
 @media all and (max-width:560px) { html{font-size: 18px} }
 
@@ -47,6 +48,23 @@ body {
 	font-size: 1em
 }
 
+pre {
+	padding: 0 1em;
+	background: #eee;
+	white-space: break-spaces;
+	word-break: break-word;
+	font-size: inherit
+}
+
+pre code {
+	padding: 0;
+	background-color: transparent;
+	border: 0;
+	white-space: pre;
+	white-space: pre-wrap;
+	color: inherit
+}
+
 footer {
 	width: 100%;
 	height: 5em
@@ -57,36 +75,34 @@ footer {
 </head>
 
 <body>
-<div id="test"></div>
+<aside>
+	<a href="gprd-compliance.html" onclick='(function(){domain=window.location.hostname;document.cookie=domain+"="+encodeURIComponent("Ok"+domain)+";expires=Thu, 01 Jan 1970 00:00:00 GMT";document.cookie=domain+"="+encodeURIComponent("No"+domain)+";expires=Thu,01 Jan 1970 00:00:00 GMT";})();return true;' style="position:sticky;top:1em;right:1em;float:right;display:block;margin:0 .2em .5em;padding:.15em .5em .45em;background:#05f;border:1px solid #eee;color:#fff;font-size:17.5px;line-height:1.5em;outline:thin;box-shadow:0 0 0 .1rem rgba(0,0,0,.025)">Reset the test</a>
+</aside>
 
-<a href="gprd-compliance.html" onclick='(function(){domain=window.location.hostname;document.cookie=domain+"="+encodeURIComponent("Ok"+domain)+";expires=Thu, 01 Jan 1970 00:00:00 GMT";document.cookie=domain+"="+encodeURIComponent("No"+domain)+";expires=Thu,01 Jan 1970 00:00:00 GMT";})();return true;' style="position:sticky;top:1em;right:1em;float:right;display:block;margin:0 .2em .5em;padding:.15em .5em .45em;background:#05f;border:1px solid #eee;color:#fff;font-size:17.5px;line-height:1.5em;outline:thin;box-shadow:0 0 0 .1rem rgba(0,0,0,.025)">Reset the test</a>
-
-<p>Test</p>
-<p>Test</p>
-<p>Test</p>
-<p>Test</p>
-<p>Test</p>
+<header>
+	<h1>UE GDPR Compliance for External Cookies</h1>
+</header>
 
 
-<p>Test</p>
-<p>Test</p>
-<p>Test</p>
-<p>Test</p>
-<p>Test</p>
+<main>
 
-<p>Test</p>
-<p>Test</p>
-<p>Notice: due to Cookies creation/verification, this demo works only on a server.</p>
-<p>If the visitor accepts, the javascript ressources are included then when the page is reloaded a message appears.</p>
-<p>When closing the box, the counter continues and the ressources are loaded when the count is finished.</p>
-<p>When the visitor declines, the external javascript ressources are not included, then on page reload a message appears.</p>
-<p>For best practices with Google Analytics: the loader allows you to invocate many ressources in an array. We recommand you to call first the Google Tag Manager, then the needed script for analytics directives (as an external file):</p>
-<pre>
-<code>
-EU_cookies_law(["https://www.googletagmanager.com/gtag/js?id=UA-3-1", "//my-website.tdl/js/google-analytics-instance.js"]);
-</code>
-</pre>
+	<p>Test</p>
+	<p>Test</p>
+	<p>Test</p>
+	<p>Test</p>
+	<p>Test</p>
 
+	<p>Test</p>
+	<p>Test</p>
+	<p>Notice: due to Cookies creation/verification, this demo works only on a server.</p>
+	<p>If the visitor accepts, the javascript ressources are included then when the page is reloaded a message appears.</p>
+	<p>When closing the box, the counter continues and the ressources are loaded when the count is finished.</p>
+	<p>When the visitor declines, the external javascript ressources are not included, then on page reload a message appears.</p>
+	<p>For best practices with Google Analytics: the loader allows you to invocate many ressources in an array. We recommand you to call first the Google Tag Manager, then the needed script for analytics directives (as an external file):</p>
+	<pre><code>EU_cookies_law(["https://www.googletagmanager.com/gtag/js?id=UA-3-1", "//my-website.tdl/js/google-analytics-instance.js"]);
+	</code></pre>
+
+</main>
 
 	<div role="alertdialog" tabindex="-1" aria-hidden="false" class="pat-eu-cookies-law" id="pat-eu-cookies-law"></div><noscript><p class="" aria-hidden="true">Please, activate javascript in your browser.</p></noscript><p id="cookies-info"></p>
 
@@ -95,6 +111,6 @@ EU_cookies_law(["https://www.googletagmanager.com/gtag/js?id=UA-3-1", "//my-webs
 </footer>
 
 <!-- Do not forget to put the script into your /js/ directory ;) -->
-<script src="js/EU_cookies_law_en.js"></script>
+<script src="js/EU_cookies_law_en.js" async></script>
 
 </body></html>
