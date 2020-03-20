@@ -36,7 +36,7 @@ First, activate "Advanced options" in the "Admin" preferences section in your Te
 Now call this new form with its minimal necessary markup where you want to display the "GPRD compliance widget", maybe just before you page footers (recommanded usage):
 
     <txp:if_section name="legal-statement"><txp:else />
-        <div role="alertdialog" tabindex="-1" aria-hidden="false" class="pat-eu-cookies-law" id="pat-eu-cookies-law"></div><noscript><p class="txt-c" aria-hidden="true">Please enable javascript from your browser settings.</p></noscript><p id="cookies-info"></p>
+        <div role="alertdialog" tabindex="-1" aria-hidden="false" class="pat-eu-cookies-law" id="pat-eu-cookies-law"></div><p aria-hidden="true" id="no-js-warning">Please enable javascript from your browser settings.</p><p id="cookies-info"></p>
         <txp:output_form form='cookies_law_en.js' format="flat.script" async />
     </txp:if_section>
 
