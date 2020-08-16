@@ -20,7 +20,7 @@ Check the `/test/` directory for a page sample (and further advices).
 
 ## Standalone features
 
-* Tiny with no dependencies;
+* Tiny with no dependencies (js file less than 6 Kb, styles files only 5 Kb);
 * Includes an extremly light "Javascript Template Engine";
 * Cross-browsers support (IE7 minimum);
 * First lines variables for easy translations;
@@ -28,6 +28,8 @@ Check the `/test/` directory for a page sample (and further advices).
 * Acceptence and Decline links are offer to vistors;
 * Decreasing counter included (can be set, max value 61 seconds) for automatic loading external ressources to pasive visitors (convenience for all web marketers);
 * Display the widget for the UE members only (based on the visitors browser language prefernces, 2 letters country codes available for changes), all other visitors will be not notified.
+
+![pat_eu_cookies_law Widget](https://raw.githubusercontent.com/cara-tm/pat_eu_cookies_law/master/ie8-preview.png)
 
 Standalone installation within TXP
 
